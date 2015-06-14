@@ -102,3 +102,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
+
+# sonst kommt Gunicorn nicht durch den Webserver hindurch
+USE_X_FORWARDED_HOST = True
+
